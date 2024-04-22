@@ -1,0 +1,131 @@
+@import './Variable.scss';
+
+.kontak {
+  background-color: $title-c;
+
+  &__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 768px) {
+      padding: 1rem 0;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-around;
+
+      @media only screen and (max-width: 768px) {
+        gap: 5rem;
+      }
+
+      @media only screen and (max-width: 468px) {
+        flex-direction: column;
+        gap: 0;
+        row-gap: 3rem;
+      }
+
+      .heading {
+        display: flex;
+        width: 300px;
+        height: 280px;
+        background-color: $body-c;
+        padding: 1.5rem;
+        border-radius: $br-12;
+        align-items: center;
+
+        @media only screen and (max-width: 468px) {
+          width: 100%;
+          height: 100%;
+          padding: 1rem;
+        }
+
+        h1 {
+          font-size: $big-fs;
+          letter-spacing: 1.5px;
+          font-weight: 600;
+          margin-bottom: 3rem;
+        }
+
+        .box__content {
+
+          .head {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            i {
+              font-size: $big-fs;
+              margin-bottom: 1rem;
+            }
+
+            h3 {
+              font-size: 1.5rem;
+              letter-spacing: 1px;
+              margin-bottom: 2rem;
+            }
+
+            a {
+              color: $title-c;
+              letter-spacing: 1px;
+              font-size: $med-fs;
+            }
+          }
+        }
+
+        .box {
+          display: flex;
+          flex-direction: column;
+          row-gap: 1rem;
+
+          i {
+            font-size: $med-fs;
+          }
+
+          h3 {
+            font-size: $small-fs;
+            letter-spacing: 1px;
+            font-weight: 400;
+          }
+
+          a {
+            color: $title-c;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+
+            @media only screen and (max-width: 468px) {
+              margin-bottom: 1.5rem;
+            }
+          }
+
+          .social {
+            display: flex;
+            column-gap: 3rem;
+            margin-top: 1.5rem;
+
+            .social__link {
+              color: $body-c;
+              width: 45px;
+              height: 45px;
+              background-color: $title-c;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: $br-12;
+              transition: .3s ease-in-out;
+
+              i {
+                font-size: 1.3rem;
+              }
+
+              &:hover {
+                background-color: $body-c;
+                color: $title-c;
+                border: 1px solid $title-c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

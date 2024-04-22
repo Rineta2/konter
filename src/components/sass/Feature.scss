@@ -1,0 +1,60 @@
+@import './Variable.scss';
+
+.features {
+  .features__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 768px) {
+      padding: 1rem 0;
+    }
+
+    .heading {
+      margin-bottom: 3rem;
+    }
+
+    .features__data {
+      display: flex;
+      gap: 2rem;
+
+      @media only screen and (max-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+      }
+
+      @media only screen and (max-width: 320px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .box {
+        width: 100%;
+        height: 180px;
+        background-color: $title-c;
+        color: $body-c;
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        padding: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: $br-12;
+
+        i {
+          font-size: $big-fs;
+        }
+
+        p {
+          font-size: $small-fs;
+          font-weight: 400;
+          letter-spacing: 1px;
+          line-height: 1.3;
+
+          @media only screen and (max-width: 768px) {
+            font-size: .813rem;
+          }
+        }
+      }
+    }
+  }
+}

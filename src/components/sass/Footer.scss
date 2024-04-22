@@ -1,0 +1,91 @@
+@import './Variable.scss';
+
+footer {
+  width: 100%;
+  background-color: $body-c;
+  padding: 1rem 5%;
+
+  .footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    .footer__logo {
+      h1 {
+        display: flex;
+        align-items: center;
+        gap: .1rem;
+        font-size: $med-fs;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+
+        .icons {
+          color: $title-c;
+          font-size: 2rem;
+          margin-bottom: .3rem;
+        }
+      }
+    }
+
+    .social {
+      display: flex;
+      column-gap: 2rem;
+
+      a {
+        color: $body-c;
+        width: 40px;
+        height: 40px;
+        background-color: $title-c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: $small-fs;
+      }
+    }
+
+    p {
+      font-size: $small-fs;
+      letter-spacing: 1px;
+
+      @media only screen and (max-width: 468px) {
+        text-align: center;
+        line-height: 1.5;
+      }
+
+      a {
+        font-size: $small-fs;
+        color: $title-c;
+      }
+    }
+  }
+}
+
+.arrow {
+  position: fixed;
+  bottom: 3rem;
+  left: -100%;
+  width: 40px;
+  height: 40px;
+  background-color: $body-c;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 999;
+  transition: 1.8s ease-in-out;
+
+  &.show {
+    opacity: 1;
+    left: 1.5rem;
+  }
+
+  .icon {
+    font-size: $med-fs;
+    color: $title-c;
+  }
+}

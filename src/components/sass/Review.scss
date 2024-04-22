@@ -1,0 +1,65 @@
+@import './Variable.scss';
+
+.review {
+  background: rgb(0, 196, 204);
+  background: linear-gradient(180deg, rgba(0, 196, 204, 1) 0%, rgba(10, 26, 68, 1) 100%);
+
+  .review__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 768px) {
+      padding: 1rem 0;
+    }
+
+    .heading {
+      color: $body-c;
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: $big-fs;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+    }
+
+    .review__data {
+      display: flex;
+      gap: 2.5rem;
+
+      @media only screen and (max-width: 468px) {
+        flex-direction: column;
+      }
+
+      .box {
+        width: 100%;
+        height: 150px;
+        padding: 1rem;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        i {
+          font-size: $big-fs;
+          color: $body-c;
+        }
+
+        h3 {
+          color: $body-c;
+          font-size: small-fs;
+          letter-spacing: .5px;
+          margin-bottom: 1rem;
+          font-weight: 400;
+        }
+
+        h2 {
+          font-size: $med-fs;
+          color: $body-c;
+          letter-spacing: 1px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

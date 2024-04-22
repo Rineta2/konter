@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+$body-f: 'Lato', sans-serif;
+
+$body-c: #FFFFFF;
+$title-c: #0A1A44;
+
+$big-fs: 3rem;
+$med-fs: 1.5rem;
+$small-fs: 1rem;
+
+$hh: 3.5rem;
+
+$br-12: 12px;
+$br-6: 6px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 85%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 75%;
+  }
+}
+
+main {
+  overflow: hidden;
+}
+
+body {
+  background-color: $body-c;
+  color: $title-c;
+}
+
+section {
+  padding: 7rem 2rem;
+
+  @media screen and (max-width: 468px) {
+    padding: 4rem 2rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+
+    i {
+      color: $body-c;
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: $small-fs;
+    font-weight: 400;
+    letter-spacing: .5px;
+  }
+}
+
+.hr {
+  width: 90%;
+  height: 2px;
+  border-radius: $br-6;
+  background-color: $title-c;
+  margin: 0 auto;
+  border: none;
+}

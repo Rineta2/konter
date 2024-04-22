@@ -1,0 +1,63 @@
+@import './Variable.scss';
+
+.say {
+  .say__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 768px) {
+      padding: 1rem 0;
+    }
+
+    .say__data {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+
+      @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        row-gap: 2rem;
+      }
+
+      .text {
+        h1 {
+          font-size: $big-fs;
+          letter-spacing: 2px;
+          color: $title-c;
+          margin-bottom: 1rem;
+        }
+
+        h3 {
+          font-size: $med-fs;
+          letter-spacing: 2px;
+          color: $title-c;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: $small-fs;
+          letter-spacing: 1px;
+          line-height: 1.3;
+          font-weight: 400;
+        }
+      }
+
+      .img {
+
+        img {
+          height: auto;
+          object-fit: cover;
+          width: 500px;
+
+          @media only screen and (max-width: 992px) {
+            width: 350px;
+          }
+
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
